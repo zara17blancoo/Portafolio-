@@ -62,19 +62,35 @@ figure{margin:1rem auto; max-width:320px}
 figure img{width:100%; border-radius:12px}
 
 /* HABILIDADES */
-.skill{margin:16px auto; max-width:700px; text-align:left}
-.progress{
-  width:100%;
-  background:#ddd;
-  height:20px;
-  border-radius:10px;
-  overflow:hidden;
+.skill {
+  margin-bottom: 20px;
 }
-.progress-bar{
-  height:100%;
-  width:0;
-  background:var(--primary-color);
+
+.progress {
+  position: relative;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #6b21a8; /* morado */
+  height: 100%;
+  width: 0;
   transition: width 2s ease;
+}
+
+.percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
 }
 
 /* PROYECTOS */
