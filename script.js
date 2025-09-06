@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillsSection = document.querySelector("#skills");
   if (skillsSection) {
     observer.observe(skillsSection);
-  }
 });
 }
 window.addEventListener('scroll', animateBarsOnView);
