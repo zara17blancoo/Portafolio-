@@ -76,6 +76,47 @@
   </div>
 </section>
 
+<!-- SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const skillsSection = document.getElementById("skills");
+    const progressBars = document.querySelectorAll(".progress-bar");
+    const percents = document.querySelectorAll(".percent");
+
+    let animated = false; // para que solo se ejecute una vez
+
+    const animateSkills = () => {
+      progressBars.forEach((bar, index) => {
+        const target = parseInt(bar.getAttribute("data-skill"));
+        let count = 0;
+
+        // animar la barra
+        bar.style.width = target + "%";
+
+        // animar el número
+        const interval = setInterval(() => {
+          if (count >= target) {
+            clearInterval(interval);
+          } else {
+            count++;
+            percents[index].textContent = count + "%";
+          }
+        }, 20);
+      });
+    };
+
+    // observar cuando la sección entra en pantalla
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !animated) {
+        animateSkills();
+        animated = true; // evita que se repita
+      }
+    }, { threshold: 0.5 });
+
+    observer.observe(skillsSection);
+  });
+</script>
+
     <!-- PROYECTOS -->
     <section id="projects" class="section">
       <h2>Proyectos</h2>
