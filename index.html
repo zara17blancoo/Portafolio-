@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Tu Nombre</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="logo">Mi Portafolio</div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">Acerca de mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ACERCA DE MÍ -->
+    <section id="about" class="section">
+      <h1>Hola, soy [Tu Nombre]</h1>
+      <p>Soy un [tu profesión o rol] apasionado/a por la tecnología, el diseño y el desarrollo web.</p>
+      <figure>
+        <img src="img/perfil.jpg" alt="Foto de perfil" />
+        <figcaption>Esta es una foto opcional. Coloca tu imagen como <strong>img/perfil.jpg</strong>.</figcaption>
+      </figure>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="skills" class="section">
+      <h2>Habilidades</h2>
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress"><div class="progress-bar" data-skill="90" aria-label="Nivel HTML 90%"></div></div>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress"><div class="progress-bar" data-skill="80" aria-label="Nivel CSS 80%"></div></div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress"><div class="progress-bar" data-skill="70" aria-label="Nivel JavaScript 70%"></div></div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="projects" class="section">
+      <h2>Proyectos</h2>
+      <div class="projects-container">
+        <article class="card" tabindex="0">
+          <h3>Proyecto 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <a class="btn" href="#" aria-label="Ver Proyecto 1">Ver más</a>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Proyecto 2</h3>
+          <p>Descripción breve del proyecto.</p>
+          <a class="btn" href="#" aria-label="Ver Proyecto 2">Ver más</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="section">
+      <h2>Contacto</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required minlength="3" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required minlength="10"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="form-msg" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Tu Nombre - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
