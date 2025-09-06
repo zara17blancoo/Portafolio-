@@ -158,6 +158,17 @@ footer{
   background:#fdfce6;
 }
 
+/* Encabezado general */
+header.header {
+  width: 100%;             /* Que abarque todo el ancho */
+  text-align: center;      /* Centrar el texto */
+  padding: 20px;           /* Espaciado */
+  background-color: #6a1b9a;  /* Mismo morado que usas */
+  color: white;            /* Texto blanco */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .project-content {
   display: flex;
   gap: 30px;              /* espacio entre columnas */
