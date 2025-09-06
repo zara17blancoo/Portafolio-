@@ -64,6 +64,8 @@ figure img{width:100%; border-radius:12px}
 /* HABILIDADES */
 .skill {
   margin-bottom: 20px;
+}
+
 .progress {
   position: relative;
   background: #ddd;
@@ -89,7 +91,6 @@ figure img{width:100%; border-radius:12px}
   font-weight: bold;
   color: #fff; /* blanco para que contraste */
 }
-
 
 /* PROYECTOS */
 .projects-container{
