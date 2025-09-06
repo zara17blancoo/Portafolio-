@@ -9,17 +9,46 @@ if (hamburger) {
   });
 }
 // Animación de barras de habilidades
-function animateBarsOnView() {
-  document.querySelectorAll('.progress-bar').forEach((bar) => {
-    const value = bar.getAttribute('data-skill');
-    const rect = bar.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight && rect.bottom >= 0;
-    if (inView) bar.style.width = value + '%';
-  });
-}
-window.addEventListener('scroll', animateBarsOnView);
-window.addEventListener('load', animateBarsOnView);
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsSection = document.querySelector("#skills");
+  const progressBars = document.querySelectorAll(".progress-bar");
+  const percents = document.querySelectorAll(".percent");
 
+  function animateProgress() {
+    progressBars.forEach((bar, index) => {
+      const value = parseInt(bar.getAttribute("data-skill"));
+      bar.style.width = value + "%";
+
+      let start = 0;
+      const counter = setInterval(() => {
+        if (start >= value) {
+          clearInterval(counter);
+        } else {
+          start++;
+          percents[index].textContent = start + "%";
+        }
+      }, 20); // velocidad de la animación
+    });
+  }
+
+  function resetProgress() {
+    progressBars.forEach((bar, index) => {
+      bar.style.width = "0%";
+      percents[index].textContent = "0%";
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.3;
+
+    if (sectionPos < screenPos) {
+      animateProgress();
+    } else {
+      resetProgress();
+    }
+  });
+});
 
 // Validación de formulario en tiempo real
 const form = document.getElementById('contact-form');
