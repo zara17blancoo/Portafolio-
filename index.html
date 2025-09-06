@@ -83,8 +83,6 @@
     const progressBars = document.querySelectorAll(".progress-bar");
     const percents = document.querySelectorAll(".percent");
 
-    let animated = false; // para que solo se ejecute una vez
-
     const animateSkills = () => {
       progressBars.forEach((bar, index) => {
         const target = parseInt(bar.getAttribute("data-skill"));
@@ -106,10 +104,10 @@
     };
 
     // observar cuando la sección entra en pantalla
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !animated) {
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+      if (entries[0].isIntersecting) {
         animateSkills();
-        animated = true; // evita que se repita
+        observerInstance.disconnect(); // 🔥 esto corta la observación después de la primera vez
       }
     }, { threshold: 0.5 });
 
