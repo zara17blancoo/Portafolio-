@@ -46,31 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(skillsSection);
 });
 
-// Carrusel
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".carousel-item");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    items.forEach((item, i) => {
-      item.classList.remove("active");
-      if (i === index) item.classList.add("active");
-    });
-  }
-
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    showSlide(currentIndex);
-  });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % items.length;
-    showSlide(currentIndex);
-  });
-});
-
 // Validación de formulario en tiempo real
 const form = document.getElementById('contact-form');
 const msg = document.getElementById('form-msg');
