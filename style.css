@@ -64,17 +64,16 @@ figure img{width:100%; border-radius:12px}
 /* HABILIDADES */
 .skill {
   margin-bottom: 20px;
-}
 .progress {
   position: relative;
   background: #ddd;
   height: 20px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 25px; /* espacio para que el número no se encime */
 }
 
 .progress-bar {
+  position: relative;
   background: #6b21a8; /* morado */
   height: 100%;
   width: 0;
@@ -83,11 +82,12 @@ figure img{width:100%; border-radius:12px}
 
 .percent {
   position: absolute;
-  top: -25px;       /* lo mueve hacia arriba */
-  right: 0;         /* alineado a la derecha */
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 14px;
   font-weight: bold;
-  color: #000;      /* negro, para que resalte sobre el fondo blanco */
+  color: #fff; /* blanco para que contraste */
 }
 
 
