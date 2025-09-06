@@ -65,13 +65,13 @@ figure img{width:100%; border-radius:12px}
 .skill {
   margin-bottom: 20px;
 }
-
 .progress {
   position: relative;
   background: #ddd;
   height: 20px;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 25px; /* espacio para que el número no se encime */
 }
 
 .progress-bar {
@@ -83,15 +83,13 @@ figure img{width:100%; border-radius:12px}
 
 .percent {
   position: absolute;
-  right: 10px;
-  top: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: black;
+  top: -25px;       /* lo mueve hacia arriba */
+  right: 0;         /* alineado a la derecha */
+  font-size: 14px;
   font-weight: bold;
+  color: #000;      /* negro, para que resalte sobre el fondo blanco */
 }
+
 
 /* PROYECTOS */
 .projects-container{
