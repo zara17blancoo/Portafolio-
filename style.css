@@ -1,7 +1,7 @@
 :root{
-  --primary-color:#d2a2db;
+  --primary-color:#682364f1;
   --secondary-color:#000000;
-  --bg-color:#682364f1;
+  --bg-color:#d2a2db;
 }
 
 *{box-sizing:border-box}
