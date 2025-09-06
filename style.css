@@ -49,16 +49,16 @@ header{background:var(--primary-color);}
 
 /* SECCIONES */
 .section{
-  padding:56px 0;
-  width:100%;
+  padding:56px 16px;
+  max-width:1100px;
   margin:0 auto;
   text-align:center;
 }
-.section h2 {
-  color: var(--secondary-color); /* negro */
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
+
+.section h2{margin-bottom:16px}
+
+figure{margin:1rem auto; max-width:320px}
+figure img{width:100%; border-radius:12px}
 /* HABILIDADES */
 .skill {
   margin-bottom: 20px;
