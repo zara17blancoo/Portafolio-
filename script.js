@@ -10,44 +10,40 @@ if (hamburger) {
 }
 // Animación de barras de habilidades
 document.addEventListener("DOMContentLoaded", () => {
-  const skillsSection = document.querySelector("#skills");
+  const skillsSection = document.getElementById("skills");
   const progressBars = document.querySelectorAll(".progress-bar");
-  const percents = document.querySelectorAll(".percent");
+  let animated = false; // <-- bandera para que se ejecute solo una vez
 
-  function animateProgress() {
-    progressBars.forEach((bar, index) => {
-      const value = parseInt(bar.getAttribute("data-skill"));
-      bar.style.width = value + "%";
+  const animateBars = () => {
+    progressBars.forEach(bar => {
+      const skillLevel = bar.getAttribute("data-skill");
+      const percent = bar.querySelector(".percent");
 
-      let start = 0;
-      const counter = setInterval(() => {
-        if (start >= value) {
-          clearInterval(counter);
+      bar.style.width = skillLevel + "%";
+
+      let current = 0;
+      const interval = setInterval(() => {
+        if (current >= skillLevel) {
+          clearInterval(interval);
         } else {
-          start++;
-          percents[index].textContent = start + "%";
+          current++;
+          percent.textContent = current + "%";
         }
-      }, 20); // velocidad de la animación
+      }, 20);
     });
-  }
+  };
 
-  function resetProgress() {
-    progressBars.forEach((bar, index) => {
-      bar.style.width = "0%";
-      percents[index].textContent = "0%";
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        animateBars();
+        animated = true; // <-- evita que se vuelva a ejecutar
+        observer.disconnect(); // opcional, desconecta el observer
+      }
     });
-  }
+  }, { threshold: 0.5 });
 
-  window.addEventListener("scroll", () => {
-    const sectionPos = skillsSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
-
-    if (sectionPos < screenPos) {
-      animateProgress();
-    } else {
-      resetProgress();
-    }
-  });
+  observer.observe(skillsSection);
 });
 
 // Validación de formulario en tiempo real
