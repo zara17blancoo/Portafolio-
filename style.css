@@ -6,17 +6,14 @@
 
 *{box-sizing:border-box}
 
-body{
- font-family: 'Poppins', sans-serif;
-  h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  color: #3b0764;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 1rem;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Si quieres que solo se aplique en el hero */
+.hero-text h2,
+.hero-text p {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* NAV */
