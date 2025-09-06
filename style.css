@@ -7,13 +7,9 @@
 *{box-sizing:border-box}
 
 body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Si quieres que solo se aplique en el hero */
-.hero-text h2,
-.hero-text p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* tipografía */
+  background-color: #d49ae6; /* para evitar que Tailwind herede un color raro */
+  color: #020101; /* color de texto base */
 }
 
 /* NAV */
