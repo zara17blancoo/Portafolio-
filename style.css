@@ -59,9 +59,19 @@ header{background:var(--primary-color);}
 
 figure{margin:1rem auto; max-width:320px}
 figure img{width:100%; border-radius:12px}
+
 /* HABILIDADES */
-.skill {
-  margin-bottom: 20px;
+.skills-section {
+  width: 100%;            
+  background: #d49ae6;    
+  padding: 56px 0;         
+}
+
+/* Contenido centrado */
+.skills-section .section {
+  max-width: 1100px;       
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .progress {
