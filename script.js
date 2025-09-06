@@ -8,47 +8,14 @@ if (hamburger) {
     navLinks.classList.toggle('active');
   });
 }
-// Animación de barras de progreso al hacer scroll
-document.addEventListener("DOMContentLoaded", () => {
-  const progressBars = document.querySelectorAll(".progress-bar");
-
-  function fillBars() {
-    progressBars.forEach(bar => {
-      const value = parseInt(bar.getAttribute("data-skill"), 10);
-      bar.style.width = value + "%";
-
-      const span = bar.querySelector("span");
-      let counter = 0;
-
-      // Animación del número
-      const interval = setInterval(() => {
-        if (counter >= value) {
-          clearInterval(interval);
-        } else {
-          counter++;
-          span.textContent = counter + "%";
-        }
-      }, 15);
-
-      // Mostrar el texto cuando la animación empieza
-      span.style.opacity = 1;
-    });
-  }
-
-  // IntersectionObserver: activa cuando #skills entra en pantalla
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        fillBars();
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  const skillsSection = document.querySelector("#skills");
-  if (skillsSection) {
-    observer.observe(skillsSection);
-});
+// Animación de barras de habilidades
+function animateBarsOnView() {
+  document.querySelectorAll('.progress-bar').forEach((bar) => {
+    const value = bar.getAttribute('data-skill');
+    const rect = bar.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom >= 0;
+    if (inView) bar.style.width = value + '%';
+  });
 }
 window.addEventListener('scroll', animateBarsOnView);
 window.addEventListener('load', animateBarsOnView);
