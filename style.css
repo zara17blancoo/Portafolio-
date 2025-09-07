@@ -242,13 +242,6 @@ nav, .nav-links {
   line-height: 1.6;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#fdfce6;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px){
   .nav-links{
