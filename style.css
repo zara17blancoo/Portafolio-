@@ -217,27 +217,28 @@ nav, .nav-links {
   margin-bottom: 20px;
   padding-left: 20px;
 }
-.proyecto {
+
+.descripcion {
   padding: 20px;
   line-height: 1.6;
-  color: #fff; /* texto blanco */
+  color: #fff;
   text-align: justify;
 }
 
-.proyecto h2 {
+.descripcion h2 {
   font-size: 28px;
   margin-bottom: 20px;
   text-align: center;
-  color: #ffffff; /* título blanco */
+  color: #ffffff;
 }
 
-.proyecto p {
+.descripcion p {
   margin-bottom: 15px;
 }
 
-.proyecto ul {
+.descripcion ul {
   margin: 10px 0 20px 40px;
-  list-style-type: "✔ "; /* viñeta personalizada */
+  list-style-type: "✔ ";
 }
 
 /* RESPONSIVE */
