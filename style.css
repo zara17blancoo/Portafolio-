@@ -23,7 +23,9 @@ header{background:var(--primary-color);}
   margin:0 auto;
 }
 
-.logo{color:#fff; font-weight:700}
+.logo {
+  color: white !important;
+}
 
 .nav-links{
   display:flex;
