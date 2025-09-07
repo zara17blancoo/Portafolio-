@@ -217,6 +217,28 @@ nav, .nav-links {
   margin-bottom: 20px;
   padding-left: 20px;
 }
+.proyecto {
+  padding: 20px;
+  line-height: 1.6;
+  color: #fff; /* texto blanco */
+  text-align: justify;
+}
+
+.proyecto h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff; /* título blanco */
+}
+
+.proyecto p {
+  margin-bottom: 15px;
+}
+
+.proyecto ul {
+  margin: 10px 0 20px 40px;
+  list-style-type: "✔ "; /* viñeta personalizada */
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px){
