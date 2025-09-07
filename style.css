@@ -221,7 +221,7 @@ nav, .nav-links {
 .descripcion {
   padding: 20px;
   line-height: 1.6;
-  color: #fff;
+  color: #000;
   text-align: justify;
 }
 
@@ -229,7 +229,7 @@ nav, .nav-links {
   font-size: 28px;
   margin-bottom: 20px;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
 }
 
 .descripcion p {
