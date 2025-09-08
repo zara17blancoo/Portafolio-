@@ -7,9 +7,9 @@
 *{box-sizing:border-box}
 
 body {
-  font-family: 'Poppins', sans-serif; /* tipografía */
-  background-color: #d49ae6; /* para evitar que Tailwind herede un color raro */
-  color: #020101; /* color de texto base */
+  font-family: 'Poppins', sans-serif; 
+  background-color: #d49ae6;
+  color: #020101;
 }
 
 /* NAV */
@@ -171,32 +171,32 @@ header .logo {
 
 /* Elimina cualquier display:flex del nav */
 nav, .nav-links {
-  display: none; /* oculta enlaces en páginas de proyectos */
+  display: none; 
 }
 .project-content {
   display: flex;
-  gap: 30px;              /* espacio entre columnas */
-  align-items: flex-start; /* alinear arriba */
+  gap: 30px;              
+  align-items: flex-start; 
   margin-top: 20px;
 }
 
 .project-images {
-  flex: 1;                /* la columna de imágenes ocupa la mitad */
+  flex: 1;               
   display: flex;
-  flex-direction: column; /* imágenes una debajo de otra */
+  flex-direction: column; 
   gap: 15px;
 }
 
 .project-images img {
   width: 100%;
-  max-width: 350px;       /* límite de ancho */
+  max-width: 350px;       
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .project-description {
-  flex: 2;                /* columna de texto más ancha */
+  flex: 2;               
 }
 
 .project-description h2 {
